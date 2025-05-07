@@ -9,87 +9,102 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #1c1c1c;
+      background-color: #0f0f0f;
       color: #fff;
     }
 
     header {
-      background-color: #111;
-      padding: 60px 20px;
+      background-color: #000;
+      padding: 80px 20px 40px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 42px;
-      color: #ff5722;
+      font-size: 44px;
+      color: #ff4500;
+      margin-bottom: 10px;
     }
 
     header p {
       font-size: 18px;
-      color: #ccc;
+      color: #bbb;
     }
 
     nav {
-      background-color: #222;
+      background-color: #1b1b1b;
       display: flex;
       justify-content: center;
-      gap: 30px;
-      padding: 15px 0;
+      gap: 25px;
+      padding: 15px;
     }
 
     nav a {
       color: #ff5722;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
     }
 
-    .intro {
+    .hero {
+      background: url('https://i.imgur.com/zvGkRvL.png') center center no-repeat;
+      background-size: contain;
+      background-color: #fff;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       text-align: center;
+      color: #222;
+    }
+
+    .hero h2 {
+      font-size: 34px;
+      color: #e53935;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+    }
+
+    .section {
       padding: 60px 20px;
+      text-align: center;
     }
 
-    .intro h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
+    .section h2 {
       color: #ff5722;
+      font-size: 28px;
+      margin-bottom: 20px;
     }
 
-    .features {
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      padding: 40px 20px;
-      background-color: #2c2c2c;
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .feature-box {
-      background-color: #333;
+    .box {
+      background-color: #1e1e1e;
       padding: 20px;
       border-left: 5px solid #ff5722;
       border-radius: 8px;
+      text-align: left;
     }
 
-    .feature-box h3 {
+    .box h3 {
       color: #ffab40;
       margin-bottom: 10px;
     }
 
-    .booking {
-      background-color: #111;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .booking h2 {
-      font-size: 30px;
-      color: #ff5722;
-      margin-bottom: 20px;
-    }
-
     .booking input {
-      width: 300px;
-      padding: 12px;
-      margin: 10px;
+      width: 260px;
+      padding: 10px;
+      margin: 8px;
       border: none;
       border-radius: 6px;
     }
@@ -101,40 +116,21 @@
       padding: 12px 24px;
       border-radius: 6px;
       font-size: 16px;
-      margin-top: 20px;
       cursor: pointer;
-    }
-
-    .coming-soon {
-      background: url('https://i.imgur.com/zvGkRvL.png') no-repeat center center;
-      background-color: #fff;
-      background-size: contain;
-      padding: 200px 20px;
-      text-align: center;
-      color: #222;
-    }
-
-    .coming-soon h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
-      color: #ff5722;
-    }
-
-    .coming-soon p {
-      font-size: 20px;
-      line-height: 1.6;
+      margin-top: 10px;
     }
 
     footer {
       background-color: #111;
-      text-align: center;
       padding: 30px;
       font-size: 14px;
-      color: #888;
+      color: #aaa;
+      text-align: center;
     }
 
-    a {
+    footer a {
       color: #ffab40;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -153,43 +149,39 @@
     <a href="#book">Book Ride</a>
   </nav>
 
-  <section class="intro">
-    <h2>Book your taxi or limousine</h2>
-    <p>Reliable, on-time, and professional service. From airports to hotels and more.</p>
+  <div class="hero">
+    <h2>🚕 Coming Soon</h2>
+    <p>We are currently preparing our taxi service. Launching soon – stay tuned!</p>
+  </div>
+
+  <section class="section" id="corporates">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="box">
+        <h3>🚘 For Corporates</h3>
+        <p>Reliable transportation solutions for employees and executive teams.</p>
+      </div>
+      <div class="box" id="smes">
+        <h3>💼 For SMEs</h3>
+        <p>Streamlined invoicing and on-demand rides for small businesses.</p>
+      </div>
+      <div class="box" id="travel">
+        <h3>🌎 Travel Agencies</h3>
+        <p>Partner with us to arrange airport transfers and hotel pickups worldwide.</p>
+      </div>
+      <div class="box" id="fleet">
+        <h3>🚖 Fleet Owners</h3>
+        <p>Join our network and start receiving bookings immediately.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="features" id="corporates">
-    <div class="feature-box">
-      <h3>🚘 For Corporates</h3>
-      <p>Preferred by professionals. Schedule corporate rides across the U.S.</p>
-    </div>
-    <div class="feature-box" id="smes">
-      <h3>💼 For SMEs</h3>
-      <p>Control ride expenses with invoicing and online payments.</p>
-    </div>
-    <div class="feature-box" id="travel">
-      <h3>🌎 Travel Agencies</h3>
-      <p>Manage international transfers and hotel pickups for clients.</p>
-    </div>
-    <div class="feature-box" id="fleet">
-      <h3>🚖 Own a Fleet?</h3>
-      <p>Join our system and start accepting online bookings now.</p>
-    </div>
-  </section>
-
-  <section class="booking" id="book">
+  <section class="section booking" id="book">
     <h2>Quick Booking</h2>
     <input type="text" placeholder="Pick-up location" /><br />
     <input type="text" placeholder="Drop-off location" /><br />
     <input type="datetime-local" /><br />
     <button>Request Ride</button>
-  </section>
-
-  <section class="coming-soon">
-    <div class="coming-text">
-      <h2>🚕 Coming Soon</h2>
-      <p>We are currently preparing our taxi service.<br />Launching soon – stay tuned!</p>
-    </div>
   </section>
 
   <footer>
